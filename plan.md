@@ -47,15 +47,3 @@
 ## VP v.3
 
 ...
-
-Headline
-Metis Study App, your connection to your SoC study community
-
-Subheadline
-The bootcamp has a lot of content, and lots to learn. Sometimes it's easier to learn with others, this helps you connect with other SoC students/graduates in quick and efficient to study together
-
-Testimonials
-Archie said: - OMG this really helped me work together with others around my parental duties
-Annamaria said: This helped me prep for interviews
-Faisal: This is my favourite app EVER!!
-Irena: I connected with so many other people I wouldn't have otherwise and learnt loads.
