@@ -10,6 +10,9 @@ const Form = () => {
     subjects: [],
   });
 
+  // store validation errors
+  const [errors, setErrors] = useState({});
+
   // handle form input changes
   const handleChange = (e) => {
     const { name, value, options } = e.target;
@@ -26,16 +29,40 @@ const Form = () => {
     }
   };
 
+  // validate form inputs
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = "Name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.aboutMe) newErrors.aboutMe = "About Me is required";
+    if (formData.subjects.length === 0)
+      newErrors.subjects = "At least one subject must be selected";
+    return newErrors;
+  };
+
   // handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(
-      `Form submitted with data: 
-        ${JSON.stringify(formData.name)}
-        ${JSON.stringify(formData.email)}
-        ${JSON.stringify(formData.aboutMe)}
-        ${JSON.stringify(formData.subjects)}`
-    );
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      alert(
+        `Form submitted with data: 
+          ${JSON.stringify(formData.name)}
+          ${JSON.stringify(formData.email)}
+          ${JSON.stringify(formData.aboutMe)}
+          ${JSON.stringify(formData.subjects)}`,
+      );
+      // Clear form data and errors after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        aboutMe: "",
+        subjects: [],
+      });
+      setErrors({});
+    }
   };
 
   return (
@@ -50,26 +77,30 @@ const Form = () => {
             value={formData.name}
             onChange={handleChange}
           />
+          {errors.name && <span className={styles.error}>{errors.name}</span>}
         </label>
         <label className={styles.formLabel}>
           Email:
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
           />
+          {errors.email && <span className={styles.error}>{errors.email}</span>}
         </label>
         <label className={styles.formLabel}>
           About Me:
-          <input
-            type="textarea"
+          <textarea
             name="aboutMe"
-            placeholder="About Me"
+            placeholder="Tell us about yourself"
             value={formData.aboutMe}
             onChange={handleChange}
           />
+          {errors.aboutMe && (
+            <span className={styles.error}>{errors.aboutMe}</span>
+          )}
         </label>
         <label className={styles.formLabel}>
           Subjects:
@@ -79,12 +110,15 @@ const Form = () => {
             value={formData.subjects}
             onChange={handleChange}
           >
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
           </select>
+          {errors.subjects && (
+            <span className={styles.error}>{errors.subjects}</span>
+          )}
         </label>
-        <button className={styles.button}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
