@@ -1,0 +1,18 @@
+.container {
+  width: 80%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  height: 2rem;
+}
