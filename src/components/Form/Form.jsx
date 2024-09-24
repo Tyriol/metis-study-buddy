@@ -52,7 +52,7 @@ const Form = () => {
           ${JSON.stringify(formData.name)}
           ${JSON.stringify(formData.email)}
           ${JSON.stringify(formData.aboutMe)}
-          ${JSON.stringify(formData.subjects)}`,
+          ${JSON.stringify(formData.subjects)}`
       );
       // Clear form data and errors after successful submission
       setFormData({
@@ -110,9 +110,9 @@ const Form = () => {
             value={formData.subjects}
             onChange={handleChange}
           >
-            <option value="math">Math</option>
-            <option value="science">Science</option>
-            <option value="history">History</option>
+            <option value="front-end">Front-End</option>
+            <option value="back-end">Back-End</option>
+            <option value="database-engineering">Database Engineering</option>
           </select>
           {errors.subjects && (
             <span className={styles.error}>{errors.subjects}</span>
