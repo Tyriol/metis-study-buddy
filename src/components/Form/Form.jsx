@@ -52,7 +52,7 @@ const Form = () => {
           ${JSON.stringify(formData.name)}
           ${JSON.stringify(formData.email)}
           ${JSON.stringify(formData.aboutMe)}
-          ${JSON.stringify(formData.subjects)}`
+          ${JSON.stringify(formData.subjects)}`,
       );
       // Clear form data and errors after successful submission
       setFormData({

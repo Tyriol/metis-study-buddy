@@ -47,3 +47,13 @@
 ## VP v.3
 
 ...
+
+## Authentication and user data creation
+
+- sign up via supabase
+  - entry in auth.users
+  - trigger row addition in profiles table
+- User profile creation page
+  - add name to profile table
+  - add about me profile table
+  - subjects to subjects table
