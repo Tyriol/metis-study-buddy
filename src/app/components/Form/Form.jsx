@@ -1,11 +1,12 @@
 import styles from "./Form.module.css";
 import { useState } from "react";
+import supabase from "@/helpers/supabaseClient";
 
 const Form = () => {
   // store form state to create user profile
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    // email: "",
     aboutMe: "",
     subjects: [],
   });
@@ -33,7 +34,7 @@ const Form = () => {
   const validate = () => {
     const newErrors = {};
     if (!formData.name) newErrors.name = "Name is required";
-    if (!formData.email) newErrors.email = "Email is required";
+    // if (!formData.email) newErrors.email = "Email is required";
     if (!formData.aboutMe) newErrors.aboutMe = "About Me is required";
     if (formData.subjects.length === 0)
       newErrors.subjects = "At least one subject must be selected";
@@ -41,23 +42,32 @@ const Form = () => {
   };
 
   // handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      alert(
-        `Form submitted with data: 
-          ${JSON.stringify(formData.name)}
-          ${JSON.stringify(formData.email)}
-          ${JSON.stringify(formData.aboutMe)}
-          ${JSON.stringify(formData.subjects)}`,
-      );
-      // Clear form data and errors after successful submission
+      const { data, error } = await supabase.from("profiles").update([
+        {
+          id: supabase.auth.getUser().id, // Use the authenticated user's id
+          name: formData.name,
+          // email: formData.email,
+          about: formData.aboutMe,
+          // subjects: formData.subjects,
+        },
+      ]);
+
+      if (error) {
+        console.log("Error inserting data:", error.message);
+      } else {
+        console.log("Profile created:", data);
+      }
+
+      // Clear form data after submission
       setFormData({
-        name: "",
-        email: "",
+        firstname: "",
+        // email: "",
         aboutMe: "",
         subjects: [],
       });
@@ -79,7 +89,7 @@ const Form = () => {
           />
           {errors.name && <span className={styles.error}>{errors.name}</span>}
         </label>
-        <label className={styles.formLabel}>
+        {/* <label className={styles.formLabel}>
           Email:
           <input
             type="email"
@@ -89,7 +99,7 @@ const Form = () => {
             onChange={handleChange}
           />
           {errors.email && <span className={styles.error}>{errors.email}</span>}
-        </label>
+        </label> */}
         <label className={styles.formLabel}>
           About Me:
           <textarea
