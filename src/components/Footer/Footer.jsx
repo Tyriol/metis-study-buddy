@@ -13,8 +13,9 @@ const Footer = () => {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       </div>
       <div className="footer-icon">
-        <p className="material-symbols-outlined">user </p>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <p className="material-symbols-outlined">
+          account_circle
+        </p>
       </div>
     </footer>
   );
