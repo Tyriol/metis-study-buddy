@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
       <p>METIS CREATED BY BYTE-SIZED FRIENDS</p>
-      <Card/>
+      <Card />
       <Footer />
     </>
   );
