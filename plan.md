@@ -57,3 +57,13 @@
   - add name to profile table
   - add about me profile table
   - subjects to subjects table
+
+// hide signout on signin page
+// user profile if signed in
+// user details form if signing up
+// add name, about, subjects
+// update user record
+// creates an entry in subjects
+// user profile
+// click to see matches
+// takes you to list of matches
