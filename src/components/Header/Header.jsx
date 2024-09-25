@@ -1,15 +1,6 @@
 import React from "react";
-import { createClient } from "@supabase/supabase-js";
-import { Auth } from "@supabase/auth-ui-react";
+import supabase from "@/helpers/supabaseClient";
 import "./Header.css";
-import dotenv from "dotenv";
-
-dotenv.config();
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-);
 
 async function signOut() {
   const { error } = await supabase.auth.signOut();

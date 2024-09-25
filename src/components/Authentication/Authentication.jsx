@@ -1,15 +1,7 @@
 import { useState, useEffect } from "react";
-import { createClient } from "@supabase/supabase-js";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-
-import dotenv from "dotenv";
-dotenv.config();
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-);
+import supabase from "../../helpers/supabaseClient";
 
 export default function Authentication() {
   const [session, setSession] = useState(null);
