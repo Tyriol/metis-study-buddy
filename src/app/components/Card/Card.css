@@ -10,7 +10,8 @@
 }
 
 .card-image {
-  width: 100%; /* Full width of the container */
+  width: 90%; /* Full width of the container */
+  height: auto;
   border-radius: 10px 10px 0 0; /* Rounded corners on the top */
   margin-bottom: 20px;
 }
@@ -64,3 +65,20 @@ transition: background-color 0.3s;
 .matchButton:hover {
   background-color: #86EAE5;
 }
+
+.updateButton {
+  padding: 10px 20px;
+  background-color: #084887;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 1em;
+  }
+  
+  .updateButton:hover {
+    background-color: #86EAE5;
+  }
+
+ 

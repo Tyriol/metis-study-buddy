@@ -8,7 +8,7 @@ export default function Card({ firstName, lastName, aboutMe }) {
     <section className="card-image-container">
       <Image
         className="card-image"
-        src="/assets/images/female-avatar.png"
+        src="/assets/images/red-avatar.png"
         width={500}
         height={500}
         alt="Avatar"
@@ -25,6 +25,11 @@ export default function Card({ firstName, lastName, aboutMe }) {
         <Link href="/matches">
           <button className="matchButton"> Go to My Matches</button>
         </Link>
+      </div>
+      <div>
+      <Link href="/profile-update">
+        <button className="updateButton"> Update my Profile</button>
+      </Link>
       </div>
     </section>
   );
