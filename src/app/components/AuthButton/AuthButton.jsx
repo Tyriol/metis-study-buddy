@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/navigation";
+import "./AuthButton.css"; 
 
 export default function AuthButton() {
   const router = useRouter();
@@ -9,6 +10,8 @@ export default function AuthButton() {
   };
 
   return (
-    <button onClick={handleAuth}>Click here to Sign In or Sign Up now!</button>
+    <button className="auth-button" onClick={handleAuth}>
+      Click here to Sign In or Sign Up now!
+    </button>
   );
 }

@@ -17,7 +17,7 @@ const Main = ({ children }) => {
         />
           <div className="main-content">
             <h1>Welcome to METIS</h1>
-            <p> "Connect, Learn, Succeed"</p>
+            <p> Connect, Learn, Succeed</p>
             <p>
               <AuthButton />
             </p>
