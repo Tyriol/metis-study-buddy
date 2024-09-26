@@ -8,7 +8,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import signOut from "@/helpers/signout";
-import './SignoutButton.css';
+import "./SignoutButton.css";
 
 export default function SignoutButton() {
   const router = useRouter();
@@ -22,5 +22,9 @@ export default function SignoutButton() {
     }
   };
 
-  return <button className="signout-button" onClick={handleSignout}>Sign Out</button>;
+  return (
+    <button className="signout-button" onClick={handleSignout}>
+      Sign Out
+    </button>
+  );
 }
