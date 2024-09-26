@@ -1,6 +1,7 @@
 import React from "react";
 import "./Main.css";
 import SignoutButton from "../SignoutButton/SignoutButton";
+import AuthButton from "../AuthButton/AuthButton";
 
 const Main = ({ children }) => {
   return (
@@ -8,7 +9,7 @@ const Main = ({ children }) => {
       <div className="main-content">
         <h1>Welcome to METIS</h1>
         <SignoutButton />
-        <p>Please sign in or sign up to continue</p>
+        <p><AuthButton /></p>
         {children}
       </div>
     </main>
