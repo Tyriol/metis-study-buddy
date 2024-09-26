@@ -27,9 +27,9 @@ export default function Card({ firstName, lastName, aboutMe, subjects }) {
         </Link>
       </div>
       <div>
-      <Link href="/profile-update">
-        <button className="updateButton"> Update my Profile</button>
-      </Link>
+        <Link href="/profile-update">
+          <button className="updateButton"> Update my Profile</button>
+        </Link>
       </div>
     </section>
   );
