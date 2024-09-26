@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import supabase from "@/helpers/supabaseClient";
 import Card from "@/app/components/Card/Card";
+import styles from "./UserProfile.module.css"; // Importing the CSS module
 
 const UserProfile = () => {
   const [profile, setProfile] = useState(null);
-  // Fetch user profile from Supabase
+  
   useEffect(() => {
     const fetchProfile = async () => {
-      const user = await supabase.auth.getUser(); // Get the logged-in user
+      const user = await supabase.auth.getUser();
       if (user) {
         let { data, error } = await supabase
           .from("profiles")
@@ -25,18 +26,20 @@ const UserProfile = () => {
     };
     fetchProfile();
   }, []);
+  
   if (!profile) {
-    return <div>Loading profile...</div>;
+    return <div className={styles.loading}>Loading profile...</div>;
   }
+  
   return (
-    <div>
-      <h1>User Profile</h1>
+
+    <div className={styles.container}>
+      <h1 className={styles.title}>User Profile</h1>
       <Card
         firstName={profile.first_name}
         lastName={profile.last_name}
         aboutMe={profile.about_me}
       />
-    </div>
   );
 };
 
