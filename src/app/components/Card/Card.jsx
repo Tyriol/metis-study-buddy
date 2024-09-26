@@ -26,12 +26,12 @@ export default function Card() {
 }
 
 /* Card needs:
-    Image / Avatar
-    Name
-    Email Address
-    About
-    Subjects 
-    Buttons for matching, discarding card 
+    Image / Avatar ✅
+    Name ✅
+    Email Address ✅
+    About ✅
+    Subjects ✅
+    - Buttons for matching, discarding card 
 
     - Putting card in container to show image above and text organised below
     - Should be centre of page

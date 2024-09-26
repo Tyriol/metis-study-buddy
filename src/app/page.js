@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import Header from "@/app/components/Header/Header.jsx";
-import Card from "@/app/components/Card/Card.jsx";
-import Footer from "@/app/components/Footer/Footer.jsx";
-import Main from "@/app/components/Main/Main.jsx";
-import Auth from "@/app/components/Authentication/Authentication";
-import Authentication from "@/app/components/Authentication/Authentication";
+
+import Header from "@/components/Header/Header.jsx";
+import Card from "@/components/Card/Card.jsx";
+import Footer from "@/components/Footer/Footer.jsx";
+import Main from "@/components/Main/Main.jsx";
+import Test from "@/components/Matches/Matches.jsx";
 
 export default function Home() {
   return (
