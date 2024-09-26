@@ -58,7 +58,7 @@ import "./Matches.css";
 // </div>
 
 // Test function for hard-coded data
-export default function Test() {
+export default function MatchList() {
   return (
     <div className="image-text-box">
       <div className="image-container">
