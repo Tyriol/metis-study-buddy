@@ -8,8 +8,9 @@ const Main = ({ children }) => {
     <main className="main">
       <div className="main-content">
         <h1>Welcome to METIS</h1>
-        <SignoutButton />
-        <p><AuthButton /></p>
+        <p>
+          <AuthButton />
+        </p>
         {children}
       </div>
     </main>

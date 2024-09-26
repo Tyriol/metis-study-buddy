@@ -20,8 +20,9 @@ export default function Authentication() {
       console.log("Auth event:", _event); //check
       setSession(session);
 
-      const testEvent = _event; console.log(testEvent)
-      
+      const testEvent = _event;
+      console.log(testEvent);
+
       if (_event === "SIGNED_UP") {
         console.log("User signed up"); //check
         setIsSignUp(true);
@@ -48,5 +49,3 @@ export default function Authentication() {
 
   return <div>Loading...</div>;
 }
-
-
