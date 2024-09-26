@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      />
       <div className="footer-icon">
         <a
           href="/"
@@ -19,11 +19,11 @@ const Footer = () => {
       </div>
       <div className="footer-icon">
         <a
-          href="/profile-update"
+          href="/matches"
           className="material-symbols-outlined"
           style={{ textDecoration: "none" }}
         >
-          favorite 
+          favorite
         </a>
       </div>
       <div className="footer-icon">
