@@ -1,34 +1,34 @@
-/* Responsive design needs for width changes - mobile to desktop  */ 
+/* Responsive design needs for width changes - mobile to desktop  */
 
-/* format the image to make small */  
+/* format the image to make small */
 .card-small {
-    border-radius: 0.5rem;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
-/* format the text */  
+/* format the text */
 .text-container {
-    flex: 1;
-    margin-left: 1rem;
+  flex: 1;
+  margin-left: 1rem;
 }
 
 /* format the container and spacing, equal spacing of containers and margins */
 .image-text-box {
-    display: flex;
-    align-items: flex-start; 
-    border: 1px solid rgb(black); 
-    border-radius: 0.5rem;
-    padding: 1rem;
-    max-width: 42rem;
-    background-color: linen;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid rgb(black);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 42rem;
+  background-color: linen;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .image-container {
-    flex: 0 0 auto;
-    width: 150px;
-    margin-right: 1rem;
-}  
+  flex: 0 0 auto;
+  width: 150px;
+  margin-right: 1rem;
+}

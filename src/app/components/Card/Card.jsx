@@ -5,7 +5,13 @@ import Image from "next/image";
 export default function Card() {
   return (
     <section className="card-image-container">
-      <Image className="card-image" src="/assets/images/female-avatar.png" width={500} height={500} alt="Avatar" />
+      <Image
+        className="card-image"
+        src="/assets/images/female-avatar.png"
+        width={500}
+        height={500}
+        alt="Avatar"
+      />
       <div className="card-text">
         <div className="card-name">Anna S.</div>
         <div className="card-email">annaexample@hotmail.co.uk</div>
@@ -18,7 +24,6 @@ export default function Card() {
     </section>
   );
 }
-
 
 /* Card needs:
     Image / Avatar ✅

@@ -5,23 +5,23 @@ import "./Matches.css";
 // /* import { supabase } from '..utils/supabaseClient'; // import your Supabase client */
 
 // function UserList() {
-//     // state to hold list of users 
+//     // state to hold list of users
 //     const [users, SetUsers] = useState([]);
 //     const [loading, setLoading] = useState(false);
 // }
 
-// // function to fetch data 
+// // function to fetch data
 // const fetchUsers = async () => {
-//     setloading(true); // show loading indicator while fetching data 
+//     setloading(true); // show loading indicator while fetching data
 
-//     const { data, error } = await supabase 
-//     .from('users') // the users table in database 
+//     const { data, error } = await supabase
+//     .from('users') // the users table in database
 //     .select('name, avatar_url, about me, subjects');
 
 //     if (error) {
 //         console.error('Error fetching user data:', error.message);
 //     } else {
-//         setUsers(data); // store the fetched data in state 
+//         setUsers(data); // store the fetched data in state
 //     }
 
 //     setLoading(false); // Hide loading indicator
@@ -35,61 +35,54 @@ import "./Matches.css";
 //         {/* Loading indicator */}
 //         {loading && <p>Loading matches...</p>}
 
-        // {/* Render the list of users from the db */}
-        // <div className="image-text-box">
-        //     {matches.map((match) => (
-        //         <div className="image-container">
-        //             <div key={match.name}>
-        //                 <Image 
-        //                 className="card-small"
-        //                 src={match.avatar_url} 
-        //                 alt={match.name} 
-        //                 width={50} 
-        //                 height={50} 
-        //                 />
-        //             </div>    
-        //             <div className="text-container">
-        //                 <h3>{match.name}</h3>
-        //                 <p> {match.aboutme}</p>
-        //                 <p>Subjects: {match.subjects}</p>
-        //             </div>    
-        //         </div>
-        //     ))}    
-        // </div>    
+// {/* Render the list of users from the db */}
+// <div className="image-text-box">
+//     {matches.map((match) => (
+//         <div className="image-container">
+//             <div key={match.name}>
+//                 <Image
+//                 className="card-small"
+//                 src={match.avatar_url}
+//                 alt={match.name}
+//                 width={50}
+//                 height={50}
+//                 />
+//             </div>
+//             <div className="text-container">
+//                 <h3>{match.name}</h3>
+//                 <p> {match.aboutme}</p>
+//                 <p>Subjects: {match.subjects}</p>
+//             </div>
+//         </div>
+//     ))}
+// </div>
 
-
-// Test function for hard-coded data 
+// Test function for hard-coded data
 export default function Test() {
-return (
+  return (
     <div className="image-text-box">
-        <div className="image-container"> 
-                    <Image 
-                        className="card-small" 
-                        src="/assets/images/female-avatar.png" 
-                        width={300} 
-                        height={300} 
-                        alt="Avatar"
-                    />
-        </div>    
-        <div className="text-container">
-            <h3> Sophie H.</h3>
-            <p> 
-                I am interested in data engineering and DevOps. I am currently interviewing for junior roles in these areas. 
-            </p>
-            <p>Subjects: React.js, SQL, Python</p>
-        </div>
-    </div>            
-    );
-    }
-    
+      <div className="image-container">
+        <Image
+          className="card-small"
+          src="/assets/images/female-avatar.png"
+          width={300}
+          height={300}
+          alt="Avatar"
+        />
+      </div>
+      <div className="text-container">
+        <h3> Sophie H.</h3>
+        <p>
+          I am interested in data engineering and DevOps. I am currently
+          interviewing for junior roles in these areas.
+        </p>
+        <p>Subjects: React.js, SQL, Python</p>
+      </div>
+    </div>
+  );
+}
 
-
-
-
-// export default MatchList; 
-
-
-
+// export default MatchList;
 
 /* Component: List of matches that will pull data from the database and show you the name, avatar, and interests of the other users 
 Having the matches page still accessible from the homepage? Eg not just accessible after clicking on your own profile card. Page would need to reload to update with any new users

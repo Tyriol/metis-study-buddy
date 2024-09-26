@@ -1,11 +1,25 @@
 import styles from "./Form.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import supabase from "@/helpers/supabaseClient";
 
 const Form = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      setUser(user);
+    };
+
+    getUser();
+  }, []);
+
   // store form state to create user profile
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    firstName: "",
+    lastName: "",
     aboutMe: "",
     subjects: [],
   });
@@ -32,8 +46,8 @@ const Form = () => {
   // validate form inputs
   const validate = () => {
     const newErrors = {};
-    if (!formData.name) newErrors.name = "Name is required";
-    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.firstName) newErrors.firstName = "First Name is required";
+    if (!formData.lastName) newErrors.lastName = "Last Name is required";
     if (!formData.aboutMe) newErrors.aboutMe = "About Me is required";
     if (formData.subjects.length === 0)
       newErrors.subjects = "At least one subject must be selected";
@@ -41,23 +55,34 @@ const Form = () => {
   };
 
   // handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      alert(
-        `Form submitted with data: 
-          ${JSON.stringify(formData.name)}
-          ${JSON.stringify(formData.email)}
-          ${JSON.stringify(formData.aboutMe)}
-          ${JSON.stringify(formData.subjects)}`
-      );
-      // Clear form data and errors after successful submission
+      const { data, error } = await supabase
+        .from("profiles")
+        .update({
+          id: supabase.auth.getUser().id, // Use the authenticated user's id
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          about_me: formData.aboutMe,
+          // subjects: formData.subjects,
+        })
+        .eq("id", user.id)
+        .select();
+
+      if (error) {
+        console.log("Error inserting data:", error.message);
+      } else {
+        console.log("Profile created:", data);
+      }
+
+      // Clear form data after submission
       setFormData({
-        name: "",
-        email: "",
+        firstName: "",
+        lastName: "",
         aboutMe: "",
         subjects: [],
       });
@@ -69,26 +94,30 @@ const Form = () => {
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.formLabel}>
-          Name:
+          First Name:
           <input
             type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
+            name="firstName"
+            placeholder="First Name"
+            value={formData.firstName}
             onChange={handleChange}
           />
-          {errors.name && <span className={styles.error}>{errors.name}</span>}
+          {errors.firstName && (
+            <span className={styles.error}>{errors.firstName}</span>
+          )}
         </label>
         <label className={styles.formLabel}>
-          Email:
+          Last Name:
           <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={formData.lastName}
             onChange={handleChange}
           />
-          {errors.email && <span className={styles.error}>{errors.email}</span>}
+          {errors.lastName && (
+            <span className={styles.error}>{errors.lastName}</span>
+          )}
         </label>
         <label className={styles.formLabel}>
           About Me:
