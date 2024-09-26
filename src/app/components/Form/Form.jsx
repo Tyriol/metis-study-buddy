@@ -103,11 +103,11 @@ const Form = () => {
             onChange={handleChange}
             className={styles.inputField}
           />
-        {errors.firstName && (
-        <span className={styles.error}>{errors.firstName}</span>
-        )}
+          {errors.firstName && (
+            <span className={styles.error}>{errors.firstName}</span>
+          )}
         </label>
-  
+
         <label className={styles.formLabel}>
           Last Name:
           <input
@@ -118,11 +118,11 @@ const Form = () => {
             onChange={handleChange}
             className={styles.inputField}
           />
-        {errors.lastName && (
-        <span className={styles.error}>{errors.lastName}</span>
-        )}
+          {errors.lastName && (
+            <span className={styles.error}>{errors.lastName}</span>
+          )}
         </label>
-  
+
         <label className={styles.formLabel}>
           About Me:
           <textarea
@@ -132,11 +132,11 @@ const Form = () => {
             onChange={handleChange}
             className={styles.textAreaField}
           />
-        {errors.aboutMe && (
-        <span className={styles.error}>{errors.aboutMe}</span>
-        )}
+          {errors.aboutMe && (
+            <span className={styles.error}>{errors.aboutMe}</span>
+          )}
         </label>
-  
+
         <label className={styles.formLabel}>
           Subjects:
           <select
@@ -146,18 +146,20 @@ const Form = () => {
             onChange={handleChange}
             className={styles.selectField}
           >
-          <option value="front-end">Front-End</option>
-          <option value="back-end">Back-End</option>
-          <option value="database-engineering">Database Engineering</option>
+            <option value="front-end">Front-End</option>
+            <option value="back-end">Back-End</option>
+            <option value="database-engineering">Database Engineering</option>
           </select>
-        {errors.subjects && (
-        <span className={styles.error}>{errors.subjects}</span>
-        )}
+          {errors.subjects && (
+            <span className={styles.error}>{errors.subjects}</span>
+          )}
         </label>
-  
-      <button type="submit" className={styles.button}>Submit</button>
-    </form>
-  </div>
+
+        <button type="submit" className={styles.button}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 

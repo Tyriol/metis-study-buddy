@@ -7,7 +7,7 @@ import styles from "./UserProfile.module.css"; // Importing the CSS module
 
 const UserProfile = () => {
   const [profile, setProfile] = useState(null);
-  
+
   useEffect(() => {
     const fetchProfile = async () => {
       const user = await supabase.auth.getUser();
@@ -26,13 +26,12 @@ const UserProfile = () => {
     };
     fetchProfile();
   }, []);
-  
+
   if (!profile) {
     return <div className={styles.loading}>Loading profile...</div>;
   }
-  
-  return (
 
+  return (
     <div className={styles.container}>
       <h1 className={styles.title}>User Profile</h1>
       <Card

@@ -1,9 +1,8 @@
-'use client';
+"use client";
 import "./globals.css";
 import Header from "@/app/components/Header/Header.jsx";
 import Footer from "@/app/components/Footer/Footer.jsx";
 import signOut from "@/helpers/signout.js";
-
 
 export default function RootLayout({ children }) {
   return (
@@ -13,7 +12,9 @@ export default function RootLayout({ children }) {
           <button onClick={signOut}>Sign Out</button>
         </Header>
 
-      {children}<Footer /></body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
