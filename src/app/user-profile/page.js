@@ -40,6 +40,7 @@ const UserProfile = () => {
         lastName={profile.last_name}
         aboutMe={profile.about_me}
       />
+    </div>
   );
 };
 

@@ -12,7 +12,6 @@ import Test from "@/app/components/Matches/Matches";
 export default function Home() {
   return (
     <>
-      <Header />
       <Main />
       <Footer />
     </>
