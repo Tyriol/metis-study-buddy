@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header.jsx";
 import Card from "@/components/Card/Card.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 import Main from "@/components/Main/Main.jsx";
+import Test from "@/components/Matches/Matches.jsx";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Main />
       <p>METIS CREATED BY BYTE-SIZED FRIENDS</p>
       <Card />
+      <Test/>
       <Footer />
     </>
   );
