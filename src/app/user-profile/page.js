@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import supabase from "@/helpers/supabaseClient";
+import Card from "@/app/components/Card/Card";
 
 const UserProfile = () => {
   const [profile, setProfile] = useState(null);
@@ -30,12 +31,11 @@ const UserProfile = () => {
   return (
     <div>
       <h1>User Profile</h1>
-      <p>
-        Name: {profile.first_name} {profile.last_name}
-      </p>
-      {/* <p>Email: {profile.email}</p> */}
-      <p>About Me: {profile.about_me}</p>
-      {/* <p>Subjects: {profile.subjects.join(", ")}</p> */}
+      <Card
+        firstName={profile.first_name}
+        lastName={profile.last_name}
+        aboutMe={profile.about_me}
+      />
     </div>
   );
 };
