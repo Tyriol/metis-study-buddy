@@ -1,0 +1,31 @@
+.container {
+    padding: 20px;
+    background-color: Linen;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .title {
+    color: #4A4A4A;
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .text {
+    color: #4A4A4A;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.5em;
+    color: #8c9a9e;
+  }
+  
