@@ -2,13 +2,13 @@
 
 import Form from "../components/Form/Form";
 
-const ProfilePage = () => {
+const ProfileCreationPage = () => {
   return (
     <div>
-      <h1>Create Your Profile</h1>
+      <h1>Update Your Profile</h1>
       <Form />
     </div>
   );
 };
 
-export default ProfilePage;
+export default ProfileCreationPage;
