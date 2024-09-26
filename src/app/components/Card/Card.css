@@ -50,17 +50,17 @@
   padding: 10px;
 }
 
-/* Matches button styling */ 
+/* Matches button styling */
 .matchButton {
-padding: 10px 20px;
-background-color: #084887;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s;
+  padding: 10px 20px;
+  background-color: #084887;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .matchButton:hover {
-  background-color: #86EAE5;
+  background-color: #86eae5;
 }

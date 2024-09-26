@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Card({ firstName, lastName, aboutMe, subjects }) {
   return (
