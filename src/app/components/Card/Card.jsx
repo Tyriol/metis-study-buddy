@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Card({ firstName, lastName, aboutMe }) {
   return (
@@ -19,6 +20,11 @@ export default function Card({ firstName, lastName, aboutMe }) {
         <div className="card-email">annaexample@hotmail.co.uk</div>
         <div className="card-about">{aboutMe}</div>
         <div className="card-subjects"> React · SQL · JavaScript </div>
+      </div>
+      <div>
+        <Link href="/matches">
+          <button className="matchButton"> Go to My Matches</button>
+        </Link>
       </div>
     </section>
   );
