@@ -5,7 +5,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-icon">
-        <a href="/matches" className="material-symbols-outlined" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <a
+          href="/matches"
+          className="material-symbols-outlined"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           home
         </a>
         <link
@@ -14,7 +18,11 @@ const Footer = () => {
         />
       </div>
       <div className="footer-icon">
-        <a href="/profile-update" className="material-symbols-outlined" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <a
+          href="/profile-update"
+          className="material-symbols-outlined"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           chat
         </a>
         <link
@@ -23,7 +31,11 @@ const Footer = () => {
         />
       </div>
       <div className="footer-icon">
-        <a href="/user-profile" className="material-symbols-outlined" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <a
+          href="/user-profile"
+          className="material-symbols-outlined"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           account_circle
         </a>
       </div>
