@@ -68,7 +68,7 @@ const Form = () => {
           first_name: formData.firstName,
           last_name: formData.lastName,
           about_me: formData.aboutMe,
-          // subjects: formData.subjects,
+          subjects: formData.subjects,
         })
         .eq("id", user.id)
         .select();
