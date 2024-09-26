@@ -38,6 +38,7 @@ const UserProfile = () => {
         firstName={profile.first_name}
         lastName={profile.last_name}
         aboutMe={profile.about_me}
+        subjects={profile.subjects}
       />
     </div>
   );

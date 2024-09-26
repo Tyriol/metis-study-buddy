@@ -59,6 +59,30 @@ import "./Matches.css";
 
 // Test function for hard-coded data
 export default function MatchList() {
+  const matches = [
+    {
+      firstName: "Sophie",
+      lastName: "H.",
+      aboutMe:
+        "I am interested in data engineering and DevOps. I am currently interviewing for junior roles in these areas.",
+      subjects: ["React.js, SQL, Python"],
+    },
+    {
+      firstName: "Sophie",
+      lastName: "H.",
+      aboutMe:
+        "I am interested in data engineering and DevOps. I am currently interviewing for junior roles in these areas.",
+      subjects: ["React.js, SQL, Python"],
+    },
+    {
+      firstName: "Sophie",
+      lastName: "H.",
+      aboutMe:
+        "I am interested in data engineering and DevOps. I am currently interviewing for junior roles in these areas.",
+      subjects: ["React.js, SQL, Python"],
+    },
+  ];
+
   return (
     <div className="image-text-box">
       <div className="image-container">
