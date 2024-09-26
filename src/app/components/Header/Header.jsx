@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">METIS</div>
-      <SignoutButton />
+      <SignoutButton className="signout-button" /> 
     </header>
   );
 };

@@ -93,6 +93,7 @@ const Form = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
+        <h1>Update Profile</h1>
         <label className={styles.formLabel}>
           First Name:
           <input
