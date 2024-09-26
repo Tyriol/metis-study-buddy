@@ -1,16 +1,12 @@
 import React from "react";
-import supabase from "@/helpers/supabaseClient";
 import "./Header.css";
-
-async function signOut() {
-  const { error } = await supabase.auth.signOut();
-}
+import SignoutButton from "../SignoutButton/SignoutButton";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">METIS</div>
-      <button onClick={signOut}>Sign Out</button>
+      <SignoutButton />
     </header>
   );
 };
