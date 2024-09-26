@@ -67,3 +67,6 @@
 // user profile
 // click to see matches
 // takes you to list of matches
+
+// populate subjects from db
+// make it look better? Checkboxes maybe?

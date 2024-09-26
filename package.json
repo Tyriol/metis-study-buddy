@@ -6,9 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky",
-    "prettier": "npx prettier . --write"
+    "lint": "next lint && npx prettier . --write",
+    "prepare": "husky"
   },
   "dependencies": {
     "@supabase/auth-ui-react": "^0.4.7",
