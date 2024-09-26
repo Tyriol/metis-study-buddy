@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import supabase from "@/helpers/supabaseClient";
+import Card from "@/app/components/Card/Card";
 import styles from "./UserProfile.module.css"; // Importing the CSS module
 
 const UserProfile = () => {
@@ -31,13 +32,14 @@ const UserProfile = () => {
   }
   
   return (
+
     <div className={styles.container}>
-      <h1 className={styles.title}>User Profile</h1> {/* Apply title class */}
-      <p className={styles.text}>
-        Name: {profile.first_name} {profile.last_name}
-      </p>
-      <p className={styles.text}>About Me: {profile.about_me}</p>
-    </div>
+      <h1 className={styles.title}>User Profile</h1>
+      <Card
+        firstName={profile.first_name}
+        lastName={profile.last_name}
+        aboutMe={profile.about_me}
+      />
   );
 };
 

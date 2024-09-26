@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 import Image from "next/image";
 
-export default function Card() {
+export default function Card({ firstName, lastName, aboutMe }) {
   return (
     <section className="card-image-container">
       <Image
@@ -13,12 +13,11 @@ export default function Card() {
         alt="Avatar"
       />
       <div className="card-text">
-        <div className="card-name">Anna S.</div>
-        <div className="card-email">annaexample@hotmail.co.uk</div>
-        <div className="card-about">
-          I am a 2023 School of Code graduate, and enjoy product design and
-          building my own mobile apps
+        <div className="card-name">
+          {firstName} {lastName}
         </div>
+        <div className="card-email">annaexample@hotmail.co.uk</div>
+        <div className="card-about">{aboutMe}</div>
         <div className="card-subjects"> React · SQL · JavaScript </div>
       </div>
     </section>
