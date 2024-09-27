@@ -44,7 +44,13 @@ export default function Authentication() {
   }, [session, isSignUp, router]);
 
   if (!session) {
-    return <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
+    return (
+      <Auth
+        supabaseClient={supabase}
+        appearance={{ theme: ThemeSupa }}
+        providers={[]}
+      />
+    );
   }
 
   return <div>Loading...</div>;

@@ -139,7 +139,7 @@ const Form = () => {
         </label>
 
         <label className={styles.formLabel}>
-          Subjects:
+          Subjects (Choose up to 3):
           <select
             name="subjects"
             multiple
@@ -147,9 +147,17 @@ const Form = () => {
             onChange={handleChange}
             className={styles.selectField}
           >
-            <option value="front-end">Front-End</option>
-            <option value="back-end">Back-End</option>
-            <option value="database-engineering">Database Engineering</option>
+            <option value="Front-end Engineering">Front-End</option>
+            <option value="Back-end Engineering">Back-End</option>
+            <option value="Database Engineering">Database Engineering</option>
+            <option value="QA Engineering/Testing">
+              QA Engineering/Testing
+            </option>
+            <option value="DevOps">DevOps</option>
+            <option value="Data and AI">Data and AI</option>
+            <option value="UX/UI">UX/UI</option>
+            <option value="Cyber Security">Cyber Security</option>
+            <option value="Product Management">Product Management</option>
           </select>
           {errors.subjects && (
             <span className={styles.error}>{errors.subjects}</span>

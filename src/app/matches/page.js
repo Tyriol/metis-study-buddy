@@ -1,6 +1,7 @@
 "use client";
 
 import MatchList from "../components/Matches/Matches";
+import Main from "../components/Main/Main";
 import { useEffect, useState } from "react";
 import supabase from "@/helpers/supabaseClient";
 
@@ -29,13 +30,13 @@ const YourMatchesPage = () => {
   }, []);
 
   return (
-    <div>
+    <Main>
       <h1>Your Matches</h1>
       {profiles.map((profile) => (
         <MatchList key={profile.id} profile={profile} />
       ))}
       ;
-    </div>
+    </Main>
   );
 };
 

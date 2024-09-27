@@ -1,18 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import styles from "./page.module.css";
-
-import Header from "@/app/components/Header/Header.jsx";
-import Card from "@/app/components/Card/Card.jsx";
-import Footer from "@/app/components/Footer/Footer.jsx";
 import Main from "@/app/components/Main/Main.jsx";
-import Test from "@/app/components/Matches/Matches";
+import AuthButton from "@/app/components/AuthButton/AuthButton.jsx";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <Main />
+      <Main>
+        <Image
+          className="logo"
+          src="/assets/images/metis-logo.png"
+          width={525}
+          height={525}
+          alt="Metis Logo"
+        />
+        <h1>Welcome to METIS</h1>
+        <p> Connect, Learn, Succeed</p>
+        <AuthButton />
+      </Main>
     </>
   );
 }
