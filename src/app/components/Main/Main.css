@@ -83,7 +83,7 @@ p {
 
   .main-content {
     padding: 10px;
-    max-height: 50vh;
+    max-height: Auto;
     max-width: 90%;
     margin-bottom: 20px;
     overflow-y: visible;
