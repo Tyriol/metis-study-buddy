@@ -19,10 +19,13 @@ export default function MatchList({ profile }) {
         </h3>
         <p>A little about me: {profile.about_me}</p>
         <p>I want to learn about:</p>
+
         <ul>
-          {profile.subjects.map((subject) => {
-            return <li key={subject}>{subject}</li>;
-          })}
+          {profile.subjects.length > 0
+            ? profile.subjects.map((subject) => {
+                return <li key={subject}>{subject}</li>;
+              })
+            : null}
         </ul>
       </div>
       <p></p>
