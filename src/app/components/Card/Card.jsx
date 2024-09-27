@@ -20,13 +20,15 @@ export default function Card({ firstName, lastName, aboutMe, subjects }) {
         <div className="card-email">annaexample@hotmail.co.uk</div>
         <div className="card-about">{aboutMe}</div>
         <p>I want to learn about:</p>
-        {subjects.map((subject) => {
-          return (
-            <div key={subject} className="card-subjects">
-              {subject}
-            </div>
-          );
-        })}
+        {subjects !== null
+          ? subjects.map((subject) => {
+              return (
+                <div key={subject} className="card-subjects">
+                  {subject}
+                </div>
+              );
+            })
+          : null}
       </div>
       <div>
         <Link href="/matches">
