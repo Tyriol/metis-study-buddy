@@ -1,9 +1,11 @@
 import styles from "./Form.module.css";
 import React, { useState, useEffect } from "react";
 import supabase from "@/helpers/supabaseClient";
+import { useRouter } from "next/navigation";
 
 const Form = () => {
   const [user, setUser] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     const getUser = async () => {
@@ -87,6 +89,7 @@ const Form = () => {
         subjects: [],
       });
       setErrors({});
+      router.push("/user-profile");
     }
   };
 
