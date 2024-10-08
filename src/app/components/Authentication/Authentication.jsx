@@ -17,7 +17,6 @@ export default function Authentication() {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      console.log("Auth event:", _event); //check
       setSession(session);
 
       const testEvent = _event;
@@ -32,8 +31,6 @@ export default function Authentication() {
   }, []);
 
   useEffect(() => {
-    console.log("Session:", session); // log session
-    console.log("Is Sign Up:", isSignUp); //log sign up
     if (session) {
       if (isSignUp) {
         router.push("/profile-update"); // Redirect to profile form after sign-up

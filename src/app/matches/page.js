@@ -11,7 +11,6 @@ const YourMatchesPage = () => {
   useEffect(() => {
     const fetchProfiles = async () => {
       const user = await supabase.auth.getUser();
-      console.log(user.data.user.id);
       if (user) {
         let { data, error } = await supabase
           .from("profiles")
@@ -22,7 +21,6 @@ const YourMatchesPage = () => {
           console.log("Error fetching profiles:", error);
         } else {
           setProfiles(data);
-          console.log(data);
         }
       }
     };
