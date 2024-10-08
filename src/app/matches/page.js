@@ -35,7 +35,6 @@ const YourMatchesPage = () => {
       {profiles.map((profile) => (
         <MatchList key={profile.id} profile={profile} />
       ))}
-      ;
     </Main>
   );
 };
