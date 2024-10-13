@@ -1,22 +1,37 @@
 # Metis Study App
 
-_A SoC Final Project by Team Byte-Sized Friends_
+<img>
 
 ## The Project Title Statement
 
-A simple app to match School of Code students and graduates based on shared subjects for study sessions or projects
+A simple app to match School of Code students and graduates based on shared subjects for study sessions or projects.
 
 ## Project Outline:
 
 1. MVP Features
-   - User Registration & Profile Creation
-   - Study Buddy Matching
-   - Match users based on shared subjects.
-   - Display matched study buddies in a list.
+   - User Registration & Profile Creation.
+   - A list of Study Buddy matches.
 2. Tech Stack
-   - Frontend: React, HTML/CSS/JavaScript
-   - Backend: Node.js, Express, MongoDB/Supabase.
-   - Deployment: Render (frontend), Heroku? or similar (backend).
+   - Frontend: React, HTML/CSS/JavaScript.
+   - Backend: Node.js, Supabase.
+   - Deployment: Netlify.
+
+## Future release features
+
+- Ability to update profile without having to update it all.
+- Smart matching on chosen subjects.
+- In app messaging.
+
+## Original Team pre-fork
+
+<table>
+   <tr style="width: 100%; display: flex; justify-content: space-between;"><td>Archie Reader</td><td>Elspeth Mardaljevic</td><td>Eric Roberts</td><td>Irena Binnebesel</td><td>Ryan Smith</td></tr>
+   <tr style="width: 100%; display: flex; justify-content: space-between;"><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td></tr>
+<table>
+
+### Our Team Charter
+
+<img src="./project-documentation/team-charter-v1.png" alt="Team Charter Miro Board">
 
 ## Press Release
 
