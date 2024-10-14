@@ -1,19 +1,19 @@
 import Image from "next/image";
-import "./Matches.css";
+import styles from "./Matches.module.css";
 
 export default function MatchList({ profile }) {
   return (
-    <div className="image-text-box">
-      <div className="image-container">
+    <div className={styles.imageTextBox}>
+      <div className={styles.imageContainer}>
         <Image
-          className="card-small"
+          className={styles.cardSmall}
           src="/assets/images/female-avatar.png"
           width={300}
           height={300}
           alt="Avatar"
         />
       </div>
-      <div className="text-container">
+      <div className={styles.textContainer}>
         <h3>
           Name: {profile.first_name} {profile.last_name}
         </h3>

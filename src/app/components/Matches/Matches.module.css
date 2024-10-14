@@ -1,7 +1,7 @@
 /* Responsive design needs for width changes - mobile to desktop  */
 
 /* format the image to make small */
-.card-small {
+.cardSmall {
   border-radius: 0.5rem;
   object-fit: cover;
   width: 100%;
@@ -9,13 +9,13 @@
 }
 
 /* format the text */
-.text-container {
+.textContainer {
   flex: 1;
   margin-left: 1rem;
 }
 
 /* format the container and spacing, equal spacing of containers and margins */
-.image-text-box {
+.imageTextBox {
   display: flex;
   align-items: flex-start;
   border: 1px solid rgb(black);
@@ -27,7 +27,7 @@
   /* margin-left: 1rem; */
 }
 
-.image-container {
+.imageContainer {
   flex: 0 0 auto;
   width: 150px;
   margin-right: 1rem;

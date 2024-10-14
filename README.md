@@ -25,8 +25,8 @@ A simple app to match School of Code students and graduates based on shared subj
 ## Original Team pre-fork
 
 <table>
-   <tr style="width: 100%; display: flex; justify-content: space-between;"><td>Archie Reader</td><td>Elspeth Mardaljevic</td><td>Eric Roberts</td><td>Irena Binnebesel</td><td>Ryan Smith</td></tr>
-   <tr style="width: 100%; display: flex; justify-content: space-between;"><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td></tr>
+   <tr><td>Archie Reader</td><td>Elspeth Mardaljevic</td><td>Eric Roberts</td><td>Irena Binnebesel</td><td>Ryan Smith</td></tr>
+   <tr><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td><td><a href="">LinkedIn</a></td></tr>
 <table>
 
 ### Our Team Charter
