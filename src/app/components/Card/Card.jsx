@@ -3,7 +3,13 @@ import "./Card.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Card({ firstName, lastName, aboutMe, subjects }) {
+export default function Card({
+  firstName,
+  lastName,
+  aboutMe,
+  subjects,
+  email,
+}) {
   return (
     <section className="card-image-container">
       <Image
@@ -17,7 +23,7 @@ export default function Card({ firstName, lastName, aboutMe, subjects }) {
         <div className="card-name">
           {firstName} {lastName}
         </div>
-        <div className="card-email">annaexample@hotmail.co.uk</div>
+        <div className="card-email">{email}</div>
         <div className="card-about">{aboutMe}</div>
         <p>I want to learn about:</p>
         {subjects !== null

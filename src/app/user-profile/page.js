@@ -35,12 +35,13 @@ const UserProfile = () => {
 
   return (
     <Main>
-      <h1 className={styles.title}>User Profile</h1>
+      <h1 className={styles.title}>Your Profile</h1>
       <Card
         firstName={profile.first_name}
         lastName={profile.last_name}
         aboutMe={profile.about_me}
         subjects={profile.subjects}
+        email={profile.email}
       />
     </Main>
   );
