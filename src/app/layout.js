@@ -8,12 +8,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header>
-          <button onClick={signOut}>Sign Out</button>
-        </Header>
-
-        {children}
-        <Footer />
+        <div className="wrapper">
+          <Header>
+            <button onClick={signOut}>Sign Out</button>
+          </Header>
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

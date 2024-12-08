@@ -12,6 +12,7 @@ export default function AuthPage() {
         width={525}
         height={525}
         alt="Metis Logo"
+        priority={true}
       />
       <h1>Welcome to METIS</h1>
       <p> Connect, Learn, Succeed</p>
