@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: "Mulish", sans-serif;
+  font-size: 14px;
 }
 
 body {
@@ -11,4 +12,10 @@ body {
 
 .wrapper {
   height: 100dvh;
+}
+
+@media (max-width: 768px) {
+  * {
+    font-size: 10px;
+  }
 }
