@@ -16,14 +16,10 @@ export default function Authentication() {
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
 
-      const testEvent = _event;
-      console.log(testEvent);
-
-      if (_event === "SIGNED_UP") {
-        console.log("User signed up"); //check
+      if (event === "SIGNED_UP") {
         setIsSignUp(true);
       }
     });
@@ -33,9 +29,9 @@ export default function Authentication() {
   useEffect(() => {
     if (session) {
       if (isSignUp) {
-        router.push("/profile-update"); // Redirect to profile form after sign-up
+        router.push("/profile-update");
       } else {
-        router.push("/user-profile"); // Redirect to user profile page after sign-in
+        router.push("/user-profile");
       }
     }
   }, [session, isSignUp, router]);
