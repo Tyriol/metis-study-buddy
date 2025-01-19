@@ -1,8 +1,8 @@
 .card-image-container {
   width: 90%;
-  margin: 50px auto; /* This centers the card horizontally */
-  padding: 20px;
-  background-color: #f9f9f9;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: #b8b8b8;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -10,48 +10,41 @@
 }
 
 .card-image {
-  width: 90%; /* Full width of the container */
+  width: 50%;
   height: auto;
-  border-radius: 10px 10px 0 0; /* Rounded corners on the top */
-  margin-bottom: 20px;
+  border-radius: 1rem;
 }
 
-/* Style the name */
 .card-name {
   font-size: 1.5rem;
   margin: 10px 0;
   color: #333;
 }
 
-/* Style the email */
 .card-email {
   font-size: 1rem;
   color: #555;
   margin-bottom: 10px;
 }
 
-/* Style the about section */
 .card-about {
   font-size: 0.9rem;
   color: #666;
   line-height: 1.5;
 }
 
-/* Style the subjects section */
 .card-subjects {
   font-size: 0.9rem;
   color: #666;
   line-height: 1.5;
 }
 
-/* Add spacing around the text */
 .card-text {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
 
-/* Matches button styling */
 .matchButton {
   padding: 10px 20px;
   background-color: #084887;
