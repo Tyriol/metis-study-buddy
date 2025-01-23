@@ -1,20 +1,15 @@
-/* Responsive design needs for width changes - mobile to desktop  */
-
-/* format the image to make small */
-.cardSmall {
+/* .cardSmall {
   border-radius: 0.5rem;
   object-fit: cover;
   width: 100%;
   height: auto;
 }
 
-/* format the text */
 .textContainer {
   flex: 1;
   margin-left: 1rem;
 }
 
-/* format the container and spacing, equal spacing of containers and margins */
 .imageTextBox {
   display: flex;
   align-items: flex-start;
@@ -24,11 +19,41 @@
   max-width: 42rem;
   background-color: linen;
   margin-bottom: 2rem;
-  /* margin-left: 1rem; */
 }
 
 .imageContainer {
   flex: 0 0 auto;
   width: 150px;
   margin-right: 1rem;
+} */
+
+.imageTextBox {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 50, 0.2);
+}
+
+.cardSmall {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.imageContainer {
+  width: 30%;
+  height: auto;
+}
+
+.textContainer {
+  flex: 1;
+  text-align: left;
+}
+
+.subjects {
+  list-style: none;
+  padding: 0;
 }
